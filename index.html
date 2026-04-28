@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metronome — Support</title>
+  <meta name="description" content="Support and help for the Metronome app." />
+  <style>
+    :root {
+      --bg: #0b0e17;
+      --surface: #131729;
+      --text: #e8ecf4;
+      --muted: #7b839c;
+      --accent: #4d9eff;
+      --divider: #2a3048;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #faf8f5;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #73706a;
+        --accent: #3366cc;
+        --divider: #e2dfd9;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 20px 80px;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 12px 0 28px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 36px 0 12px;
+    }
+    p { margin: 0 0 14px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 14px 0;
+    }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    .faq dt:first-child { margin-top: 0; }
+    .faq dd {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    .faq dd code {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .contact-email {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Metronome — Support</h1>
+      <p class="tagline">Help, contact, and answers for working musicians.</p>
+    </header>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p>For bug reports, feature requests, or anything else, email us:</p>
+      <p class="contact-email"><a href="mailto:juancajimi@icloud.com">juancajimi@icloud.com</a></p>
+      <p>We aim to reply within 2 business days.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <div class="card faq">
+      <dl>
+        <dt>I can't hear the click.</dt>
+        <dd>Check the side switch on your iPhone — silent mode mutes the metronome. If the switch is off, raise media volume with the side buttons (not ringer volume). On Bluetooth headphones, confirm they're connected and selected as output.</dd>
+
+        <dt>The click feels late or early.</dt>
+        <dd>Open <code>Settings → Latency Calibration</code> and follow the on-screen tap test. This compensates for your specific output device's audio path.</dd>
+
+        <dt>How do I unlock Mixed Meter, Polyrhythm, or Human Feel?</dt>
+        <dd>These are part of the Pro upgrade — a one-time purchase, no subscription. Tap any locked feature to see the upgrade screen. If you've already purchased, tap <code>Restore Purchases</code> on the same screen.</dd>
+
+        <dt>How do I delete all my data?</dt>
+        <dd>Open <code>All Settings → Delete All Data</code>. This permanently removes your practice log, streaks, goals, setlists, and imported sounds. The action is immediate and cannot be undone.</dd>
+
+        <dt>MIDI Clock or Ableton Link isn't connecting.</dt>
+        <dd>Both features rely on local-network and Bluetooth permissions. Confirm both are allowed in <code>iOS Settings → Metronome</code>. For Ableton Link, devices must be on the same Wi-Fi network.</dd>
+
+        <dt>Volume buttons aren't changing the BPM.</dt>
+        <dd>Enable <code>Volume Buttons = BPM</code> in <code>All Settings → BPM Controls</code>. The toggle is off by default to avoid surprising users who expect normal volume behavior.</dd>
+
+        <dt>The app crashed or behaves strangely.</dt>
+        <dd>Force-quit and relaunch. If the issue persists, email us with your iPhone model, iOS version, and a brief description of what happened.</dd>
+      </dl>
+    </div>
+
+    <h2>Privacy</h2>
+    <div class="card">
+      <p>Metronome does not collect, sell, or share your personal data. The app stores your settings, practice log, and setlists on your device only. Optional iCloud sync uses your private Apple iCloud account — the developer and any third party have no access.</p>
+      <p>Microphone access is used only by the built-in tuner to detect pitch in real time; audio is processed on-device and never recorded or transmitted.</p>
+    </div>
+
+    <footer>
+      <p>Metronome is made by Whitespace Studio. © 2026 Whitespace Studio. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
