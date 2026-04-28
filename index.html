@@ -3,151 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metronome — Support</title>
-  <meta name="description" content="Support and help for the Metronome app." />
+  <title>Metronome — A premium metronome for working musicians</title>
+  <meta name="description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link — wrapped in 11 hand-crafted themes. Coming to iOS." />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Metronome — A premium metronome for working musicians" />
+  <meta property="og:description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link." />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/" />
+  <meta property="og:site_name" content="Metronome" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Metronome — A premium metronome for working musicians" />
+  <meta name="twitter:description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link." />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="assets/site.css" />
+
   <style>
-    :root {
-      --bg: #0b0e17;
-      --surface: #131729;
-      --text: #e8ecf4;
-      --muted: #7b839c;
-      --accent: #4d9eff;
-      --divider: #2a3048;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #faf8f5;
-        --surface: #ffffff;
-        --text: #1a1a1a;
-        --muted: #73706a;
-        --accent: #3366cc;
-        --divider: #e2dfd9;
-      }
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      padding: 32px 20px 80px;
-    }
-    main {
-      max-width: 640px;
+    /* Page-specific styles for the marketing landing */
+
+    .hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 720px;
       margin: 0 auto;
     }
-    header {
-      padding: 12px 0 28px;
-      border-bottom: 1px solid var(--divider);
-      margin-bottom: 28px;
+    .hero img.app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(77, 158, 255, 0.25);
+      margin-bottom: 24px;
     }
-    h1 {
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin: 0 0 6px;
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      line-height: 1.1;
     }
-    .tagline {
+    .hero p.tagline {
+      font-size: 20px;
       color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.4;
+    }
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 22px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      color: var(--text);
       font-size: 14px;
-      margin: 0;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.005em;
-      margin: 36px 0 12px;
+
+    /* Phone mockup — minimal modern frame, no faux-notch */
+    .phone-section {
+      display: flex;
+      justify-content: center;
+      padding: 20px 24px 60px;
     }
-    p { margin: 0 0 14px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--divider);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin: 14px 0;
+    .phone-mockup {
+      width: 280px;
+      background: linear-gradient(180deg, #1a1f35 0%, #0b0e17 100%);
+      padding: 8px;
+      border-radius: 42px;
+      box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
     }
-    .faq dt {
-      font-weight: 600;
-      margin-top: 18px;
+    .phone-mockup img {
+      display: block;
+      width: 100%;
+      border-radius: 34px;
     }
-    .faq dt:first-child { margin-top: 0; }
-    .faq dd {
-      margin: 6px 0 0;
+
+    /* Feature grid */
+    .features {
+      padding: 40px 24px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .features h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .features .section-sub {
+      text-align: center;
       color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
     }
-    .faq dd code {
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature {
       background: var(--surface);
       border: 1px solid var(--divider);
-      padding: 1px 6px;
-      border-radius: 4px;
-      font-size: 13px;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .feature .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--surface-elevated);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 6px;
       color: var(--text);
     }
-    footer {
-      margin-top: 56px;
-      padding-top: 20px;
-      border-top: 1px solid var(--divider);
+    .feature p {
+      font-size: 14px;
       color: var(--muted);
-      font-size: 13px;
+      margin: 0;
+      line-height: 1.55;
     }
-    .contact-email {
-      font-size: 18px;
-      font-weight: 500;
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 18px 28px; }
+      .hero h1 { font-size: 34px; }
+      .hero p.tagline { font-size: 17px; }
+      .features h2 { font-size: 26px; }
+      .features { padding: 30px 18px 40px; }
+      .phone-mockup { width: 240px; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Metronome — Support</h1>
-      <p class="tagline">Help, contact, and answers for working musicians.</p>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h2>Contact</h2>
-    <div class="card">
-      <p>For bug reports, feature requests, or anything else, email us:</p>
-      <p class="contact-email"><a href="mailto:juancajimi@icloud.com">juancajimi@icloud.com</a></p>
-      <p>We aim to reply within 2 business days.</p>
-    </div>
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./" class="brand">
+        <img src="assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="support/">Support</a></li>
+        <li><a href="privacy/">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Frequently asked</h2>
-    <div class="card faq">
-      <dl>
-        <dt>I can't hear the click.</dt>
-        <dd>Check the side switch on your iPhone — silent mode mutes the metronome. If the switch is off, raise media volume with the side buttons (not ringer volume). On Bluetooth headphones, confirm they're connected and selected as output.</dd>
+  <main id="main">
+    <section class="hero">
+      <img class="app-icon" src="assets/icon-192.png" alt="Metronome app icon" width="96" height="96" />
+      <h1>The metronome musicians actually trust.</h1>
+      <p class="tagline">Sample-accurate timing, pro rhythm tools, and a finish worthy of stage and studio.</p>
+      <span class="cta-pill" role="status" aria-label="Coming soon to the App Store">
+        <span class="beat-dots" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        Coming soon to the App Store
+      </span>
+    </section>
 
-        <dt>The click feels late or early.</dt>
-        <dd>Open <code>Settings → Latency Calibration</code> and follow the on-screen tap test. This compensates for your specific output device's audio path.</dd>
+    <section class="phone-section" aria-label="App preview">
+      <div class="phone-mockup">
+        <img src="assets/screenshot.png" alt="Metronome app screen showing tempo controls, time signature, and beat indicators" width="1284" height="2778" loading="lazy" />
+      </div>
+    </section>
 
-        <dt>How do I unlock Mixed Meter, Polyrhythm, or Human Feel?</dt>
-        <dd>These are part of the Pro upgrade — a one-time purchase, no subscription. Tap any locked feature to see the upgrade screen. If you've already purchased, tap <code>Restore Purchases</code> on the same screen.</dd>
-
-        <dt>How do I delete all my data?</dt>
-        <dd>Open <code>All Settings → Delete All Data</code>. This permanently removes your practice log, streaks, goals, setlists, and imported sounds. The action is immediate and cannot be undone.</dd>
-
-        <dt>MIDI Clock or Ableton Link isn't connecting.</dt>
-        <dd>Both features rely on local-network and Bluetooth permissions. Confirm both are allowed in <code>iOS Settings → Metronome</code>. For Ableton Link, devices must be on the same Wi-Fi network.</dd>
-
-        <dt>Volume buttons aren't changing the BPM.</dt>
-        <dd>Enable <code>Volume Buttons = BPM</code> in <code>All Settings → BPM Controls</code>. The toggle is off by default to avoid surprising users who expect normal volume behavior.</dd>
-
-        <dt>The app crashed or behaves strangely.</dt>
-        <dd>Force-quit and relaunch. If the issue persists, email us with your iPhone model, iOS version, and a brief description of what happened.</dd>
-      </dl>
-    </div>
-
-    <h2>Privacy</h2>
-    <div class="card">
-      <p>Metronome does not collect, sell, or share your personal data. The app stores your settings, practice log, and setlists on your device only. Optional iCloud sync uses your private Apple iCloud account — the developer and any third party have no access.</p>
-      <p>Microphone access is used only by the built-in tuner to detect pitch in real time; audio is processed on-device and never recorded or transmitted.</p>
-    </div>
-
-    <footer>
-      <p>Metronome is made by Whitespace Studio. © 2026 Whitespace Studio. All rights reserved.</p>
-    </footer>
+    <section class="features" aria-labelledby="features-h">
+      <h2 id="features-h">Built for the click</h2>
+      <p class="section-sub">Designed for working musicians who care about timing — at home, in the studio, and on stage.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⏱</div>
+          <h3>Sample-accurate timing</h3>
+          <p>Dedicated audio scheduling. No drift. No stutter. No surprises mid-take.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">♪</div>
+          <h3>Mixed meter &amp; polyrhythms</h3>
+          <p>Chain 5/8 → 7/8 → 4/4 freely. Layer 3:2, 4:3, 5:4 with multi-bar resolution.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Human Feel</h3>
+          <p>Subtle micro-timing variation that breathes like a real drummer — not a grid.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🔌</div>
+          <h3>MIDI Clock &amp; Ableton Link</h3>
+          <p>Sync with hardware, apps, and other devices. Production-ready in studio or on stage.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⌚</div>
+          <h3>Apple Watch &amp; Live Activities</h3>
+          <p>Control playback from your wrist. Glance at tempo from the Lock Screen.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🎨</div>
+          <h3>11 hand-crafted themes</h3>
+          <p>Five dark, five light, plus System. Stage Mode for dim venues. Custom click sounds.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="support/">Support</a></li>
+      <li><a href="privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. Made for working musicians.</div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,188 @@
+/* Metronome marketing site — shared styles
+ * Palette mirrors the iOS app's "Midnight" (dark) and "Ivory" (light) themes
+ * so the website reads as a continuation of the app, not a separate brand. */
+
+:root {
+  --bg: #0b0e17;
+  --surface: #131729;
+  --surface-elevated: #1a1f35;
+  --text: #e8ecf4;
+  --muted: #7b839c;
+  --accent: #4d9eff;
+  --downbeat: #ffb84d;
+  --beat-inactive: #252a3c;
+  --divider: #2a3048;
+  --shadow-color: 0 0 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --surface-elevated: #f0ede8;
+    --text: #1a1a1a;
+    --muted: #73706a;
+    --accent: #3366cc;
+    --downbeat: #e68a2e;
+    --beat-inactive: #dcd8d2;
+    --divider: #e2dfd9;
+    --shadow-color: 0 0 0;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 100;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Site nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.site-nav .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 16px;
+}
+.site-nav .brand:hover { text-decoration: none; }
+.site-nav .brand img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.site-nav a {
+  color: var(--muted);
+  font-size: 14px;
+}
+.site-nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 14px 0;
+}
+
+/* Footer */
+footer.site-footer {
+  margin-top: 80px;
+  padding: 32px 24px;
+  border-top: 1px solid var(--divider);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+footer.site-footer ul {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+footer.site-footer a { color: var(--muted); }
+
+/* Beat-dot animation — used in CTA pill on the marketing page.
+ * Sequential pulse gives a "1-2-3-4 count-in" feel, with the first
+ * dot styled as a downbeat (orange + larger pulse) for on-brand polish. */
+.beat-dots {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+.beat-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--beat-inactive);
+  animation: beat 2s infinite ease-out;
+}
+.beat-dots .dot:nth-child(1) {
+  animation-name: beat-down;
+  animation-delay: 0ms;
+}
+.beat-dots .dot:nth-child(2) { animation-delay: 500ms; }
+.beat-dots .dot:nth-child(3) { animation-delay: 1000ms; }
+.beat-dots .dot:nth-child(4) { animation-delay: 1500ms; }
+
+@keyframes beat {
+  0%, 30%, 100% { background: var(--beat-inactive); transform: scale(1); }
+  5% { background: var(--accent); transform: scale(1.4); }
+}
+@keyframes beat-down {
+  0%, 30%, 100% { background: var(--beat-inactive); transform: scale(1); }
+  5% { background: var(--downbeat); transform: scale(1.5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .site-nav ul { gap: 14px; }
+  .container { padding: 0 18px; }
+}

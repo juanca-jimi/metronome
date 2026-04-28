@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juanca-jimi.github.io/metronome/sitemap.xml

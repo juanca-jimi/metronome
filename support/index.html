@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Metronome</title>
+  <meta name="description" content="Help, contact, and FAQ for the Metronome iOS app." />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/support/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support — Metronome" />
+  <meta property="og:description" content="Help, contact, and FAQ for the Metronome iOS app." />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/support/" />
+  <meta property="og:site_name" content="Metronome" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../assets/site.css" />
+
+  <style>
+    .doc-header {
+      padding: 12px 0 28px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 28px;
+    }
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 0 0 6px;
+    }
+    .doc-header p.tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    main h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 36px 0 12px;
+    }
+    main p { margin: 0 0 14px; }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    .faq dt:first-child { margin-top: 0; }
+    .faq dd {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    .faq dd code {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .contact-email {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    main {
+      padding: 16px 24px 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../" class="brand">
+        <img src="../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="./" aria-current="page">Support</a></li>
+        <li><a href="../privacy/">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="doc-header">
+      <h1>Support</h1>
+      <p class="tagline">Help, contact, and answers for working musicians.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p>For bug reports, feature requests, or anything else, email us:</p>
+      <p class="contact-email"><a href="mailto:juancajimi@icloud.com?subject=Metronome%20support">juancajimi@icloud.com</a></p>
+      <p>We aim to reply within 2 business days.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <div class="card faq">
+      <dl>
+        <dt>I can't hear the click.</dt>
+        <dd>Check the side switch on your iPhone — silent mode mutes the metronome. If the switch is off, raise media volume with the side buttons (not ringer volume). On Bluetooth headphones, confirm they're connected and selected as output.</dd>
+
+        <dt>The click feels late or early.</dt>
+        <dd>Open <code>All Settings → Latency Calibration</code> and follow the on-screen tap test. This compensates for your specific output device's audio path — especially Bluetooth headphones, which can add 150–300 ms of delay.</dd>
+
+        <dt>How do I unlock Mixed Meter, Polyrhythm, or Human Feel?</dt>
+        <dd>These are part of the Pro upgrade — a one-time purchase, no subscription. Tap any locked feature to see the upgrade screen. If you've already purchased, tap <code>Restore Purchases</code> on the same screen.</dd>
+
+        <dt>How do I delete all my data?</dt>
+        <dd>Open <code>All Settings → Delete All Data</code>. This permanently removes your practice log, streaks, goals, setlists, and imported sounds. The action is immediate and cannot be undone.</dd>
+
+        <dt>MIDI Clock or Ableton Link isn't connecting.</dt>
+        <dd>Both features rely on local-network and Bluetooth permissions. Confirm both are allowed in <code>iOS Settings → Metronome</code>. For Ableton Link, devices must be on the same Wi-Fi network.</dd>
+
+        <dt>Volume buttons aren't changing the BPM.</dt>
+        <dd>Enable <code>Volume Buttons = BPM</code> in <code>All Settings → BPM Controls</code>. The toggle is off by default to avoid surprising users who expect normal volume behavior.</dd>
+
+        <dt>The app crashed or behaves strangely.</dt>
+        <dd>Force-quit and relaunch. If the issue persists, email us with your iPhone model, iOS version, and a brief description of what happened.</dd>
+
+        <dt>How do I pair the Apple Watch app?</dt>
+        <dd>The Watch app installs automatically when you install Metronome on your iPhone. If it doesn't appear, open the Watch app on iPhone, scroll to "Available Apps" near the bottom, and tap Install next to Metronome.</dd>
+      </dl>
+    </div>
+
+    <h2>Privacy</h2>
+    <div class="card">
+      <p>Metronome does not collect, sell, or share your personal data. The app stores your settings, practice log, and setlists on your device only. Optional iCloud sync uses your private Apple iCloud account — the developer and any third party have no access.</p>
+      <p>Microphone access is used only by the built-in tuner to detect pitch in real time; audio is processed on-device and never recorded or transmitted.</p>
+      <p><a href="../privacy/">Read the full privacy policy →</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. Made for working musicians.</div>
+  </footer>
+</body>
+</html>
