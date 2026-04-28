@@ -109,29 +109,29 @@
     <h2>Frequently asked</h2>
     <div class="card faq">
       <dl>
-        <dt>I can't hear the click.</dt>
-        <dd>Check the side switch on your iPhone — silent mode mutes the metronome. If the switch is off, raise media volume with the side buttons (not ringer volume). On Bluetooth headphones, confirm they're connected and selected as output.</dd>
+        <dt>The click feels late or early — even after calibration.</dt>
+        <dd>Bluetooth headphones add 150–300 ms via codec, and the value drifts with battery and proximity. After running <code>All Settings → Latency Calibration</code>, also disable spatial audio and any EQ presets on your headphones — those layer additional latency on top.</dd>
 
-        <dt>The click feels late or early.</dt>
-        <dd>Open <code>All Settings → Latency Calibration</code> and follow the on-screen tap test. This compensates for your specific output device's audio path — especially Bluetooth headphones, which can add 150–300 ms of delay.</dd>
+        <dt>How is Human Feel different from a swing percentage?</dt>
+        <dd>Swing skews subdivisions in a fixed pattern (long-short, long-short). Human Feel adds randomized micro-timing variation across all subdivisions, weighted so downbeats stay rock-solid while off-beats breathe. The strength slider controls how much — at 100%, it's roughly what a session drummer adds without thinking about it.</dd>
+
+        <dt>Does Ableton Link sync count-ins?</dt>
+        <dd>Link only transmits beat phase and tempo, not count-ins. If Metronome is the Link source, your DAW joins on the next beat boundary; if the DAW is the source, Metronome's count-in plays locally before beat 1.</dd>
+
+        <dt>Can I import custom click sounds?</dt>
+        <dd>Yes — drop a 16-bit stereo WAV at 44.1 kHz with minimal leading silence (≤1 ms) into Metronome's folder via the Files app, then assign it in Sound Library. Other formats will play, but extra leading silence will shift the perceived downbeat.</dd>
 
         <dt>How do I unlock Mixed Meter, Polyrhythm, or Human Feel?</dt>
-        <dd>These are part of the Pro upgrade — a one-time purchase, no subscription. Tap any locked feature to see the upgrade screen. If you've already purchased, tap <code>Restore Purchases</code> on the same screen.</dd>
+        <dd>One-time Pro purchase. No subscription. Tap any locked feature for the upgrade sheet, or <code>Restore Purchases</code> if you've bought it before.</dd>
 
         <dt>How do I delete all my data?</dt>
-        <dd>Open <code>All Settings → Delete All Data</code>. This permanently removes your practice log, streaks, goals, setlists, and imported sounds. The action is immediate and cannot be undone.</dd>
+        <dd><code>All Settings → Delete All Data</code>. Wipes practice log, streaks, goals, setlists, and imported sounds. Immediate and irreversible.</dd>
 
-        <dt>MIDI Clock or Ableton Link isn't connecting.</dt>
-        <dd>Both features rely on local-network and Bluetooth permissions. Confirm both are allowed in <code>iOS Settings → Metronome</code>. For Ableton Link, devices must be on the same Wi-Fi network.</dd>
+        <dt>Can I bind volume buttons to BPM?</dt>
+        <dd>Yes — <code>All Settings → BPM Controls → Volume Buttons = BPM</code>. Off by default so it doesn't override normal volume behavior unexpectedly. While enabled, ringer volume is unaffected.</dd>
 
-        <dt>Volume buttons aren't changing the BPM.</dt>
-        <dd>Enable <code>Volume Buttons = BPM</code> in <code>All Settings → BPM Controls</code>. The toggle is off by default to avoid surprising users who expect normal volume behavior.</dd>
-
-        <dt>The app crashed or behaves strangely.</dt>
-        <dd>Force-quit and relaunch. If the issue persists, email us with your iPhone model, iOS version, and a brief description of what happened.</dd>
-
-        <dt>How do I pair the Apple Watch app?</dt>
-        <dd>The Watch app installs automatically when you install Metronome on your iPhone. If it doesn't appear, open the Watch app on iPhone, scroll to "Available Apps" near the bottom, and tap Install next to Metronome.</dd>
+        <dt>MIDI Clock or Ableton Link won't connect.</dt>
+        <dd>Both need local-network and Bluetooth permissions in <code>iOS Settings → Metronome</code>. Link also requires all devices to be on the same Wi-Fi network — and the same VLAN, if your router uses guest-network isolation.</dd>
       </dl>
     </div>
 

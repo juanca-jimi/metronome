@@ -79,19 +79,28 @@
       justify-content: center;
       padding: 20px 24px 60px;
     }
+    /* Phone mockup — uses CSS object-fit so the original 1284x2778
+     * App Store screenshot stays untouched on disk, but visually gets
+     * presented at a more natural ~3:5 aspect with the top of the
+     * screen prioritized (BPM display, beat dots, time signature). */
     .phone-mockup {
-      width: 280px;
+      width: 240px;
+      aspect-ratio: 3 / 5;
       background: linear-gradient(180deg, #1a1f35 0%, #0b0e17 100%);
       padding: 8px;
-      border-radius: 42px;
+      border-radius: 38px;
       box-shadow:
         0 40px 100px rgba(0, 0, 0, 0.55),
         0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
     }
     .phone-mockup img {
       display: block;
       width: 100%;
-      border-radius: 34px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 30px;
     }
 
     /* Feature grid */
