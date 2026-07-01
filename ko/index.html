@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메트로놈 — 현역 음악가를 위한 프리미엄 메트로놈</title>
+  <meta name="description" content="샘플 단위로 정확한 타이밍, 폴리리듬, 혼합 박자, MIDI 클럭, Ableton Link를 정교하게 만든 11가지 테마에 담았습니다. 곧 iOS에 출시됩니다." />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/ko/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="메트로놈 — 현역 음악가를 위한 프리미엄 메트로놈" />
+  <meta property="og:description" content="샘플 단위로 정확한 타이밍, 폴리리듬, 혼합 박자, MIDI 클럭, Ableton Link." />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/ko/" />
+  <meta property="og:site_name" content="Metronome" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="메트로놈 — 현역 음악가를 위한 프리미엄 메트로놈" />
+  <meta name="twitter:description" content="샘플 단위로 정확한 타이밍, 폴리리듬, 혼합 박자, MIDI 클럭, Ableton Link." />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../assets/site.css" />
+
+  <style>
+    /* Page-specific styles for the marketing landing */
+
+    .hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero img.app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(77, 158, 255, 0.25);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+    .hero p.tagline {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.4;
+    }
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 22px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* Phone mockup — minimal modern frame, no faux-notch */
+    .phone-section {
+      display: flex;
+      justify-content: center;
+      padding: 20px 24px 60px;
+    }
+    /* Phone mockup — uses CSS object-fit so the original 1284x2778
+     * App Store screenshot stays untouched on disk, but visually gets
+     * presented at a more natural ~3:5 aspect with the top of the
+     * screen prioritized (BPM display, beat dots, time signature). */
+    .phone-mockup {
+      width: 240px;
+      aspect-ratio: 3 / 5;
+      background: linear-gradient(180deg, #1a1f35 0%, #0b0e17 100%);
+      padding: 8px;
+      border-radius: 38px;
+      box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+    }
+    .phone-mockup img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 30px;
+    }
+
+    /* Feature grid */
+    .features {
+      padding: 40px 24px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .features h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .features .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .feature .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--surface-elevated);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      color: var(--text);
+    }
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 18px 28px; }
+      .hero h1 { font-size: 34px; }
+      .hero p.tagline { font-size: 17px; }
+      .features h2 { font-size: 26px; }
+      .features { padding: 30px 18px 40px; }
+      .phone-mockup { width: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./" class="brand">
+        <img src="../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="support/">지원</a></li>
+        <li><a href="privacy/">개인정보 처리방침</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img class="app-icon" src="../assets/icon-192.png" alt="메트로놈 앱 아이콘" width="96" height="96" />
+      <h1>음악가가 진짜로 신뢰하는 메트로놈.</h1>
+      <p class="tagline">샘플 단위로 정확한 타이밍, 프로급 리듬 도구, 그리고 무대와 스튜디오에 어울리는 완성도.</p>
+      <span class="cta-pill" role="status" aria-label="곧 App Store에 출시됩니다">
+        <span class="beat-dots" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        곧 App Store에 출시됩니다
+      </span>
+    </section>
+
+    <section class="phone-section" aria-label="App preview">
+      <div class="phone-mockup">
+        <img src="../assets/screenshot.png" alt="템포 컨트롤, 박자표, 비트 표시가 나타난 메트로놈 앱 화면" width="1284" height="2778" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-h">
+      <h2 id="features-h">클릭을 위해 설계했습니다</h2>
+      <p class="section-sub">집에서, 스튜디오에서, 무대에서 타이밍을 중요하게 여기는 현역 음악가를 위해 설계했습니다.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⏱</div>
+          <h3>샘플 단위로 정확한 타이밍</h3>
+          <p>전용 오디오 스케줄링. 드리프트 없이. 끊김 없이. 연주 도중 뜻밖의 상황 없이.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">♪</div>
+          <h3>혼합 박자 &amp; 폴리리듬</h3>
+          <p>5/8 → 7/8 → 4/4를 자유롭게 연결하세요. 3:2, 4:3, 5:4를 여러 마디에 걸쳐 정확히 맞물리도록 레이어하세요.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Human Feel</h3>
+          <p>격자가 아니라 실제 드러머처럼 숨 쉬는 섬세한 마이크로 타이밍 변화.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🔌</div>
+          <h3>MIDI 클럭 &amp; Ableton Link</h3>
+          <p>하드웨어, 앱, 다른 기기와 동기화하세요. 스튜디오에서든 무대에서든 실전에 바로 쓸 수 있습니다.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⌚</div>
+          <h3>Apple Watch &amp; Live Activities</h3>
+          <p>손목에서 재생을 제어하세요. Lock Screen에서 템포를 한눈에 확인하세요.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🎨</div>
+          <h3>정교하게 만든 11가지 테마</h3>
+          <p>다크 5종, 라이트 5종, 그리고 시스템 테마. 어두운 공연장을 위한 Stage Mode. 커스텀 클릭 사운드.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="support/">Support</a></li>
+      <li><a href="privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. 현역 음악가를 위해 만들었습니다.</div>
+  </footer>
+</body>
+</html>

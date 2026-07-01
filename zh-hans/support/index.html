@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持 — 节拍器</title>
+  <meta name="description" content="节拍器 iOS 应用的帮助、联系方式与常见问题。" />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="支持 — 节拍器" />
+  <meta property="og:description" content="节拍器 iOS 应用的帮助、联系方式与常见问题。" />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+  <meta property="og:site_name" content="Metronome" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../../assets/site.css" />
+
+  <style>
+    .doc-header {
+      padding: 12px 0 28px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 28px;
+    }
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 0 0 6px;
+    }
+    .doc-header p.tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    main h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 36px 0 12px;
+    }
+    main p { margin: 0 0 14px; }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    .faq dt:first-child { margin-top: 0; }
+    .faq dd {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    .faq dd code {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .contact-email {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    main {
+      padding: 16px 24px 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../" class="brand">
+        <img src="../../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="./" aria-current="page">支持</a></li>
+        <li><a href="../privacy/">隐私</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="doc-header">
+      <h1>支持</h1>
+      <p class="tagline">为职业音乐人提供帮助、联系方式与解答。</p>
+    </div>
+
+    <h2>联系我们</h2>
+    <div class="card">
+      <p>如需报告问题、提出功能建议或有其他任何事宜，请发送邮件给我们:</p>
+      <p class="contact-email"><a href="mailto:juancajimi@icloud.com?subject=Metronome%20support">juancajimi@icloud.com</a></p>
+      <p>我们力争在 2 个工作日内回复。</p>
+    </div>
+
+    <h2>常见问题</h2>
+    <div class="card faq">
+      <dl>
+        <dt>即便校准之后，节拍点仍感觉偏晚或偏早。</dt>
+        <dd>蓝牙耳机会因编解码器增加 150–300 ms 的延迟，且该数值会随电量与距离而漂移。运行 <code>All Settings → Latency Calibration</code> 之后，请同时关闭耳机的空间音频及任何 EQ 预设 — 它们会叠加额外的延迟。</dd>
+
+        <dt>Human Feel 与摇摆（swing）百分比有何不同？</dt>
+        <dd>摇摆按固定模式（长-短、长-短）偏移细分拍。Human Feel 则在所有细分拍上加入随机的微计时变化，并经过加权，使强拍稳如磐石，而弱拍得以呼吸。强度滑块用于控制幅度 — 在 100% 时，大致相当于录音室鼓手不假思索便会加入的那种感觉。</dd>
+
+        <dt>Ableton Link 会同步预备拍（count-in）吗？</dt>
+        <dd>Link 只传输节拍相位与速度，不传输预备拍。若节拍器为 Link 源，你的 DAW 会在下一个节拍边界加入；若 DAW 为源，则节拍器的预备拍会在第 1 拍之前于本地播放。</dd>
+
+        <dt>我可以导入自定义节拍音效吗？</dt>
+        <dd>可以 — 通过文件 App 将 44.1 kHz、16 位立体声、前导静音极短（≤1 ms）的 WAV 文件放入节拍器的文件夹，然后在 Sound Library 中指定它。其他格式也能播放，但过长的前导静音会使感知到的强拍发生偏移。</dd>
+
+        <dt>我该如何解锁混合拍号、复合节奏或 Human Feel？</dt>
+        <dd>一次性 Pro 购买。无订阅。点按任何锁定的功能即可打开升级页面，若你此前已购买，可点按 <code>Restore Purchases</code>。</dd>
+
+        <dt>我该如何删除我的全部数据？</dt>
+        <dd><code>All Settings → Delete All Data</code>。将清除练习记录、连续天数、目标、演出曲目单及已导入的音效。立即生效且不可撤销。</dd>
+
+        <dt>我可以将音量键绑定到 BPM 吗？</dt>
+        <dd>可以 — <code>All Settings → BPM Controls → Volume Buttons = BPM</code>。默认关闭，以免意外覆盖正常的音量行为。启用期间，铃声音量不受影响。</dd>
+
+        <dt>MIDI 时钟或 Ableton Link 无法连接。</dt>
+        <dd>两者都需要在 <code>iOS Settings → Metronome</code> 中授予本地网络与蓝牙权限。Link 还要求所有设备处于同一 Wi-Fi 网络 — 若你的路由器启用了访客网络隔离，则还需处于同一 VLAN。</dd>
+      </dl>
+    </div>
+
+    <h2>隐私</h2>
+    <div class="card">
+      <p>节拍器不会收集、出售或分享你的个人数据。应用仅在你的设备上存储设置、练习记录与演出曲目单。可选的 iCloud 同步使用你私人的 Apple iCloud 账户 — 开发者及任何第三方均无法访问。</p>
+      <p>麦克风访问权限仅供内置调音器实时检测音高使用；音频在设备端处理，绝不录制或传输。</p>
+      <p><a href="../privacy/">阅读完整隐私政策 →</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="../">首页</a></li>
+      <li><a href="../privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. 为职业音乐人打造。</div>
+  </footer>
+</body>
+</html>

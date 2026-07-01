@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サポート — メトロノーム</title>
+  <meta name="description" content="メトロノーム iOSアプリのヘルプ、お問い合わせ、FAQ。" />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="サポート — メトロノーム" />
+  <meta property="og:description" content="メトロノーム iOSアプリのヘルプ、お問い合わせ、FAQ。" />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/ja/support/" />
+  <meta property="og:site_name" content="Metronome" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../../assets/site.css" />
+
+  <style>
+    .doc-header {
+      padding: 12px 0 28px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 28px;
+    }
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 0 0 6px;
+    }
+    .doc-header p.tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    main h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 36px 0 12px;
+    }
+    main p { margin: 0 0 14px; }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    .faq dt:first-child { margin-top: 0; }
+    .faq dd {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    .faq dd code {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .contact-email {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    main {
+      padding: 16px 24px 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">コンテンツへスキップ</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../" class="brand">
+        <img src="../../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="./" aria-current="page">サポート</a></li>
+        <li><a href="../privacy/">プライバシー</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="doc-header">
+      <h1>サポート</h1>
+      <p class="tagline">現役ミュージシャンのためのヘルプ、お問い合わせ、そして答え。</p>
+    </div>
+
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      <p>不具合のご報告、機能のご要望、その他どんなことでも、メールでご連絡ください:</p>
+      <p class="contact-email"><a href="mailto:juancajimi@icloud.com?subject=Metronome%20support">juancajimi@icloud.com</a></p>
+      <p>2営業日以内の返信を心がけています。</p>
+    </div>
+
+    <h2>よくあるご質問</h2>
+    <div class="card faq">
+      <dl>
+        <dt>キャリブレーション後でも、クリックが遅れて、または早く聞こえます。</dt>
+        <dd>Bluetoothヘッドフォンはコーデックによって150–300 msの遅延が加わり、その値はバッテリー残量や距離によって変動します。<code>All Settings → Latency Calibration</code>を実行したうえで、ヘッドフォン側の空間オーディオやEQプリセットも無効にしてください — これらはさらに遅延を上乗せします。</dd>
+
+        <dt>Human Feelはスウィングのパーセンテージとどう違うのですか?</dt>
+        <dd>スウィングは細分音を固定パターン(ロング・ショート、ロング・ショート)で偏らせます。Human Feelはすべての細分音にランダム化したマイクロタイミングの揺らぎを加え、強拍が揺るがず安定したまま裏拍が息づくように重み付けしています。強度スライダーでその度合いを調整でき、100%ではセッションドラマーが意識せずに加える揺らぎにほぼ相当します。</dd>
+
+        <dt>Ableton Linkはカウントインを同期しますか?</dt>
+        <dd>Linkが伝えるのはビートのフェーズとテンポのみで、カウントインは含まれません。メトロノームがLinkのソースの場合、お使いのDAWは次のビートの境界で参加します。DAWがソースの場合は、メトロノームのカウントインがビート1の前にローカルで再生されます。</dd>
+
+        <dt>カスタムのクリック音をインポートできますか?</dt>
+        <dd>はい — 16ビットステレオ・44.1 kHz、先頭の無音を最小限(≤1 ms)にしたWAVを、Files app経由でメトロノームのフォルダに入れ、Sound Libraryで割り当ててください。その他の形式も再生できますが、先頭の余分な無音があると強拍の聞こえ方がずれてしまいます。</dd>
+
+        <dt>変拍子、ポリリズム、Human Feelはどうやってアンロックしますか?</dt>
+        <dd>買い切りのPro購入で、サブスクリプションはありません。ロックされた機能をタップするとアップグレードのシートが表示されます。以前に購入済みの場合は<code>Restore Purchases</code>をご利用ください。</dd>
+
+        <dt>すべてのデータを削除するにはどうすればよいですか?</dt>
+        <dd><code>All Settings → Delete All Data</code>から行えます。練習ログ、連続記録、目標、セットリスト、インポートした音源が消去されます。即時かつ取り消しできません。</dd>
+
+        <dt>音量ボタンをBPMに割り当てられますか?</dt>
+        <dd>はい — <code>All Settings → BPM Controls → Volume Buttons = BPM</code>で設定できます。通常の音量操作を予期せず上書きしないよう、デフォルトではオフです。有効な間も、着信音の音量には影響しません。</dd>
+
+        <dt>MIDIクロックまたはAbleton Linkが接続できません。</dt>
+        <dd>どちらも<code>iOS Settings → Metronome</code>でローカルネットワークとBluetoothの許可が必要です。Linkはさらに、すべてのデバイスが同じWi-Fiネットワーク上にあること — ルーターがゲストネットワークの分離を使用している場合は同じVLAN上にあることも必要です。</dd>
+      </dl>
+    </div>
+
+    <h2>プライバシー</h2>
+    <div class="card">
+      <p>メトロノームは、お客様の個人データを収集、販売、共有することはありません。アプリは、設定、練習ログ、セットリストをお客様のデバイス上にのみ保存します。任意のiCloud同期は、お客様のプライベートなApple iCloudアカウントを使用し、開発者を含むいかなる第三者もアクセスできません。</p>
+      <p>マイクへのアクセスは、内蔵チューナーが音程をリアルタイムで検出するためだけに使用されます。音声はデバイス上で処理され、録音や送信は一切行われません。</p>
+      <p><a href="../privacy/">プライバシーポリシー全文を読む →</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="../">ホーム</a></li>
+      <li><a href="../privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. 現役ミュージシャンのために。</div>
+  </footer>
+</body>
+</html>

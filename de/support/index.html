@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Metronome</title>
+  <meta name="description" content="Hilfe, Kontakt und FAQ zur Metronome iOS App." />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/de/support/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support — Metronome" />
+  <meta property="og:description" content="Hilfe, Kontakt und FAQ zur Metronome iOS App." />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/de/support/" />
+  <meta property="og:site_name" content="Metronome" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../../assets/site.css" />
+
+  <style>
+    .doc-header {
+      padding: 12px 0 28px;
+      border-bottom: 1px solid var(--divider);
+      margin-bottom: 28px;
+    }
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 0 0 6px;
+    }
+    .doc-header p.tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    main h2 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 36px 0 12px;
+    }
+    main p { margin: 0 0 14px; }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    .faq dt:first-child { margin-top: 0; }
+    .faq dd {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    .faq dd code {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .contact-email {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    main {
+      padding: 16px 24px 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../" class="brand">
+        <img src="../../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="./" aria-current="page">Support</a></li>
+        <li><a href="../privacy/">Datenschutz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <div class="doc-header">
+      <h1>Support</h1>
+      <p class="tagline">Hilfe, Kontakt und Antworten für professionelle Musiker.</p>
+    </div>
+
+    <h2>Kontakt</h2>
+    <div class="card">
+      <p>Für Fehlerberichte, Funktionswünsche oder alles andere schreiben Sie uns:</p>
+      <p class="contact-email"><a href="mailto:juancajimi@icloud.com?subject=Metronome%20support">juancajimi@icloud.com</a></p>
+      <p>Wir bemühen uns, innerhalb von 2 Werktagen zu antworten.</p>
+    </div>
+
+    <h2>Häufige Fragen</h2>
+    <div class="card faq">
+      <dl>
+        <dt>Der Klick klingt zu spät oder zu früh — sogar nach der Kalibrierung.</dt>
+        <dd>Bluetooth-Kopfhörer fügen durch den Codec 150–300 ms hinzu, und der Wert schwankt je nach Akkustand und Nähe. Nachdem Sie <code>All Settings → Latency Calibration</code> ausgeführt haben, deaktivieren Sie außerdem Spatial Audio und alle EQ-Voreinstellungen an Ihren Kopfhörern — diese addieren zusätzliche Latenz obendrauf.</dd>
+
+        <dt>Wie unterscheidet sich Human Feel von einem Swing-Prozentwert?</dt>
+        <dd>Swing verschiebt Unterteilungen nach einem festen Muster (lang-kurz, lang-kurz). Human Feel fügt über alle Unterteilungen hinweg zufällige Mikrotiming-Variationen hinzu, gewichtet so, dass betonte Zählzeiten grundsolide bleiben, während die Off-Beats atmen. Der Stärke-Regler bestimmt, wie viel — bei 100 % entspricht es ungefähr dem, was ein Session-Schlagzeuger ganz automatisch beisteuert.</dd>
+
+        <dt>Synchronisiert Ableton Link Einzähler?</dt>
+        <dd>Link überträgt nur Beat-Phase und Tempo, keine Einzähler. Ist Metronome die Link-Quelle, steigt Ihre DAW an der nächsten Beat-Grenze ein; ist die DAW die Quelle, spielt der Einzähler von Metronome lokal vor der 1 ab.</dd>
+
+        <dt>Kann ich eigene Klick-Sounds importieren?</dt>
+        <dd>Ja — legen Sie eine 16-Bit-Stereo-WAV mit 44,1 kHz und minimaler führender Stille (≤1 ms) über die Files app in den Ordner von Metronome und weisen Sie sie dann in der Sound Library zu. Andere Formate werden ebenfalls abgespielt, aber zusätzliche führende Stille verschiebt die wahrgenommene betonte Zählzeit.</dd>
+
+        <dt>Wie schalte ich gemischte Taktarten, Polyrhythmus oder Human Feel frei?</dt>
+        <dd>Einmaliger Pro-Kauf. Kein Abo. Tippen Sie auf eine gesperrte Funktion, um das Upgrade-Fenster zu öffnen, oder auf <code>Restore Purchases</code>, wenn Sie sie bereits gekauft haben.</dd>
+
+        <dt>Wie lösche ich alle meine Daten?</dt>
+        <dd><code>All Settings → Delete All Data</code>. Löscht Übungsprotokoll, Streaks, Ziele, Setlists und importierte Sounds. Sofort und unwiderruflich.</dd>
+
+        <dt>Kann ich die Lautstärketasten dem BPM zuordnen?</dt>
+        <dd>Ja — <code>All Settings → BPM Controls → Volume Buttons = BPM</code>. Standardmäßig aus, damit es das normale Lautstärkeverhalten nicht unerwartet überschreibt. Bei aktivierter Funktion bleibt die Klingeltonlautstärke unverändert.</dd>
+
+        <dt>MIDI-Clock oder Ableton Link stellt keine Verbindung her.</dt>
+        <dd>Beide benötigen die Berechtigungen für lokales Netzwerk und Bluetooth unter <code>iOS Settings → Metronome</code>. Link erfordert außerdem, dass alle Geräte im selben Wi-Fi-Netzwerk sind — und im selben VLAN, falls Ihr Router eine Gastnetzwerk-Isolierung verwendet.</dd>
+      </dl>
+    </div>
+
+    <h2>Datenschutz</h2>
+    <div class="card">
+      <p>Metronome sammelt, verkauft oder teilt Ihre personenbezogenen Daten nicht. Die App speichert Ihre Einstellungen, Ihr Übungsprotokoll und Ihre Setlists ausschließlich auf Ihrem Gerät. Die optionale iCloud-Synchronisierung nutzt Ihr privates Apple iCloud-Konto — der Entwickler und Dritte haben keinen Zugriff.</p>
+      <p>Der Mikrofonzugriff wird ausschließlich vom integrierten Stimmgerät genutzt, um die Tonhöhe in Echtzeit zu erkennen; das Audio wird auf dem Gerät verarbeitet und niemals aufgezeichnet oder übertragen.</p>
+      <p><a href="../privacy/">Vollständige Datenschutzerklärung lesen →</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="../">Startseite</a></li>
+      <li><a href="../privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. Gemacht für Musikerinnen und Musiker im Berufsalltag.</div>
+  </footer>
+</body>
+</html>

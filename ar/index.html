@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ميترونوم — ميترونوم احترافي للموسيقيين المحترفين</title>
+  <meta name="description" content="توقيت دقيق على مستوى العيّنة، وإيقاعات متعددة، وموازين مختلطة، وساعة MIDI، وAbleton Link — ضمن 11 سمة مصممة بعناية. قريبًا على iOS." />
+
+  <link rel="canonical" href="https://juanca-jimi.github.io/metronome/ar/" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ميترونوم — ميترونوم احترافي للموسيقيين المحترفين" />
+  <meta property="og:description" content="توقيت دقيق على مستوى العيّنة، وإيقاعات متعددة، وموازين مختلطة، وساعة MIDI، وAbleton Link." />
+  <meta property="og:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+  <meta property="og:url" content="https://juanca-jimi.github.io/metronome/ar/" />
+  <meta property="og:site_name" content="Metronome" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ميترونوم — ميترونوم احترافي للموسيقيين المحترفين" />
+  <meta name="twitter:description" content="توقيت دقيق على مستوى العيّنة، وإيقاعات متعددة، وموازين مختلطة، وساعة MIDI، وAbleton Link." />
+  <meta name="twitter:image" content="https://juanca-jimi.github.io/metronome/assets/og-image.png" />
+
+  <meta name="theme-color" content="#0b0e17" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
+
+  <link rel="stylesheet" href="../assets/site.css" />
+
+  <style>
+    /* Page-specific styles for the marketing landing */
+
+    .hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero img.app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(77, 158, 255, 0.25);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+    .hero p.tagline {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.4;
+    }
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 22px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--divider);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* Phone mockup — minimal modern frame, no faux-notch */
+    .phone-section {
+      display: flex;
+      justify-content: center;
+      padding: 20px 24px 60px;
+    }
+    /* Phone mockup — uses CSS object-fit so the original 1284x2778
+     * App Store screenshot stays untouched on disk, but visually gets
+     * presented at a more natural ~3:5 aspect with the top of the
+     * screen prioritized (BPM display, beat dots, time signature). */
+    .phone-mockup {
+      width: 240px;
+      aspect-ratio: 3 / 5;
+      background: linear-gradient(180deg, #1a1f35 0%, #0b0e17 100%);
+      padding: 8px;
+      border-radius: 38px;
+      box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+    }
+    .phone-mockup img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 30px;
+    }
+
+    /* Feature grid */
+    .features {
+      padding: 40px 24px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .features h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .features .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .feature .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--surface-elevated);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      color: var(--text);
+    }
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 18px 28px; }
+      .hero h1 { font-size: 34px; }
+      .hero p.tagline { font-size: 17px; }
+      .features h2 { font-size: 26px; }
+      .features { padding: 30px 18px 40px; }
+      .phone-mockup { width: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">الانتقال إلى المحتوى</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./" class="brand">
+        <img src="../assets/icon-192.png" alt="" width="28" height="28" />
+        <span>Metronome</span>
+      </a>
+      <ul>
+        <li><a href="support/">الدعم</a></li>
+        <li><a href="privacy/">الخصوصية</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img class="app-icon" src="../assets/icon-192.png" alt="أيقونة تطبيق ميترونوم" width="96" height="96" />
+      <h1>الميترونوم الذي يثق به الموسيقيون فعلًا.</h1>
+      <p class="tagline">توقيت دقيق على مستوى العيّنة، وأدوات إيقاع احترافية، وإتقان يليق بالمسرح والاستوديو.</p>
+      <span class="cta-pill" role="status" aria-label="قريبًا على App Store">
+        <span class="beat-dots" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        قريبًا على App Store
+      </span>
+    </section>
+
+    <section class="phone-section" aria-label="App preview">
+      <div class="phone-mockup">
+        <img src="../assets/screenshot.png" alt="شاشة تطبيق ميترونوم تعرض عناصر التحكم في الإيقاع، والميزان الزمني، ومؤشرات النبضات" width="1284" height="2778" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-h">
+      <h2 id="features-h">مصمَّم من أجل النقرة</h2>
+      <p class="section-sub">مصمَّم للموسيقيين المحترفين الذين يهتمون بالتوقيت — في المنزل، وفي الاستوديو، وعلى المسرح.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⏱</div>
+          <h3>توقيت دقيق على مستوى العيّنة</h3>
+          <p>جدولة صوتية مخصّصة. بلا انحراف. بلا تقطّع. بلا مفاجآت في منتصف التسجيل.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">♪</div>
+          <h3>الموازين المختلطة &amp; الإيقاعات المتعددة</h3>
+          <p>اربط 5/8 → 7/8 → 4/4 بحرية. اطبق طبقات 3:2 و4:3 و5:4 مع تحليل متعدد المقاطع.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Human Feel</h3>
+          <p>تباين دقيق في التوقيت الجزئي يتنفّس كعازف طبول حقيقي — لا كشبكة جامدة.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🔌</div>
+          <h3>ساعة MIDI &amp; Ableton Link</h3>
+          <p>زامِن مع الأجهزة والتطبيقات والأجهزة الأخرى. جاهز للإنتاج في الاستوديو أو على المسرح.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">⌚</div>
+          <h3>Apple Watch &amp; Live Activities</h3>
+          <p>تحكّم في التشغيل من معصمك. ألقِ نظرة على الإيقاع من Lock Screen.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden="true">🎨</div>
+          <h3>11 سمة مصممة بعناية</h3>
+          <p>خمس داكنة، وخمس فاتحة، إضافةً إلى System. وضع Stage Mode للأماكن الخافتة الإضاءة. وأصوات نقرات مخصّصة.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="support/">Support</a></li>
+      <li><a href="privacy/">Privacy</a></li>
+    </ul>
+    <div>© 2026 Whitespace Studio. صُمّم للموسيقيين المحترفين.</div>
+  </footer>
+</body>
+</html>

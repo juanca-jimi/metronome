@@ -1,20 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://juanca-jimi.github.io/metronome/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/de/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/es/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/zh-hans/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/" />
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://juanca-jimi.github.io/metronome/support/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ar/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/de/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/es/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/fr/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ja/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ko/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/zh-hans/support/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/support/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/support/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/support/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/support/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/support/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/support/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/support/" />
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://juanca-jimi.github.io/metronome/privacy/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ar/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/de/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/es/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/fr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ja/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/ko/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://juanca-jimi.github.io/metronome/zh-hans/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanca-jimi.github.io/metronome/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://juanca-jimi.github.io/metronome/ar/privacy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://juanca-jimi.github.io/metronome/de/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://juanca-jimi.github.io/metronome/es/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://juanca-jimi.github.io/metronome/fr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://juanca-jimi.github.io/metronome/ja/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://juanca-jimi.github.io/metronome/ko/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://juanca-jimi.github.io/metronome/zh-hans/privacy/" />
+    <lastmod>2026-07-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
