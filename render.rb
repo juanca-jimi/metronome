@@ -8,17 +8,19 @@ require "json"
 ROOT = File.expand_path(File.dirname(__FILE__))
 BASE = "https://juanca-jimi.github.io/metronome"
 
-# slug => BCP47 lang tag, for the 7 fully-translated languages.
+# slug => BCP47 lang tag. Every App Store locale slug is fully translated.
 TRANSLATED = {
-  "ar" => "ar", "de" => "de", "es" => "es", "fr" => "fr",
-  "ja" => "ja", "ko" => "ko", "zh-hans" => "zh-Hans",
+  "ar" => "ar", "de" => "de", "es" => "es", "fr" => "fr", "ja" => "ja", "ko" => "ko", "zh-hans" => "zh-Hans",
+  "bn" => "bn", "ca" => "ca", "cs" => "cs", "da" => "da", "el" => "el", "fi" => "fi", "gu" => "gu",
+  "he" => "he", "hi" => "hi", "hr" => "hr", "hu" => "hu", "id" => "id", "it" => "it", "kn" => "kn",
+  "ml" => "ml", "mr" => "mr", "ms" => "ms", "nl" => "nl", "no" => "no", "or" => "or", "pa" => "pa",
+  "pl" => "pl", "pt-BR" => "pt-BR", "pt" => "pt-PT", "ro" => "ro", "ru" => "ru", "sk" => "sk",
+  "sl" => "sl", "sv" => "sv", "ta" => "ta", "te" => "te", "th" => "th", "tr" => "tr", "uk" => "uk",
+  "ur" => "ur", "vi" => "vi", "zh-hant" => "zh-Hant",
 }
-# URL slugs that fall back to English content (URL resolves, content is the English page).
-FALLBACK = %w[
-  bn ca cs da el fi gu he hi hr hu id it kn ml mr ms nl no or pa pl
-  pt-BR pt ro ru sk sl sv ta te th tr uk ur vi zh-hant
-]
-RTL = %w[ar]
+# URL slugs that fall back to English content (none — every locale is translated).
+FALLBACK = %w[]
+RTL = %w[ar he ur]
 
 EN = JSON.parse(File.read("#{ROOT}/i18n/en.json"))
 
