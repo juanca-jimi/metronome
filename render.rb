@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Renders localized copies of the real index/support/privacy pages into per-URL-slug
+# Renders localized copies of the real index/support/privacy/terms pages into per-URL-slug
 # directories, preserving the exact design and fixing asset depth / canonical URLs /
 # lang+dir. Source of truth for text = i18n/*.json. Fails loudly if any English anchor
 # is not found (so no string can silently remain English) or any key is missing.
@@ -21,6 +21,32 @@ TRANSLATED = {
 # URL slugs that fall back to English content (none — every locale is translated).
 FALLBACK = %w[]
 RTL = %w[ar he ur]
+
+# Pages (path prefix, sitemap priority, changefreq) and language variants.
+PAGES = [["", "1.0", "monthly"], ["support/", "0.7", "monthly"], ["privacy/", "0.5", "yearly"], ["terms/", "0.5", "yearly"]]
+# [hreflang, url-prefix]; "" prefix = English root.
+VARIANTS = [["en", ""]] + TRANSLATED.map { |slug, tag| [tag, slug] }
+def url_for(pfx, page); pfx.empty? ? "#{BASE}/#{page}" : "#{BASE}/#{pfx}/#{page}"; end
+
+# Per-page <head> hreflang alternates (x-default = English root, plus all 45 variants).
+# The identical block is embedded verbatim in each English root page — the root pages
+# are both the live English pages and the render templates — so every locale render
+# inherits it unchanged. After adding/removing a locale: `ruby render.rb --hreflang`,
+# paste the fresh blocks into the 4 root pages, re-run. The render below raises if a
+# root page's block is missing or stale.
+def hreflang_block(page)
+  lines = [%(  <link rel="alternate" hreflang="x-default" href="#{url_for('', page)}" />)]
+  VARIANTS.each { |tag, pfx| lines << %(  <link rel="alternate" hreflang="#{tag}" href="#{url_for(pfx, page)}" />) }
+  lines.join("\n") + "\n"
+end
+
+if ARGV[0] == "--hreflang"
+  PAGES.each do |page, _pri, _freq|
+    puts "=== #{page.empty? ? '(root index)' : page} ==="
+    print hreflang_block(page)
+  end
+  exit 0
+end
 
 EN = JSON.parse(File.read("#{ROOT}/i18n/en.json"))
 
@@ -48,7 +74,7 @@ end
 INDEX_REPLS = [
   ['<html lang="en">', '<html lang="{{LANG}}"{{DIRATTR}}>'],
   ['<title>Metronome — A premium metronome for working musicians</title>', '<title>{{idx_title}}</title>'],
-  ['content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link — wrapped in 11 hand-crafted themes. Coming to iOS."', 'content="{{idx_meta_desc}}"'],
+  ['content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link — wrapped in 11 hand-crafted themes. Now on the App Store."', 'content="{{idx_meta_desc}}"'],
   ['<link rel="canonical" href="https://juanca-jimi.github.io/metronome/" />', '<link rel="canonical" href="{{CANON}}" />'],
   ['<meta property="og:title" content="Metronome — A premium metronome for working musicians" />', '<meta property="og:title" content="{{idx_title}}" />'],
   ['<meta property="og:description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link." />', '<meta property="og:description" content="{{idx_og_desc}}" />'],
@@ -58,11 +84,11 @@ INDEX_REPLS = [
   ['<a class="skip-link" href="#main">Skip to content</a>', '<a class="skip-link" href="#main">{{skip_link}}</a>'],
   ['<li><a href="support/">Support</a></li>', '<li><a href="support/">{{nav_support}}</a></li>'],
   ['<li><a href="privacy/">Privacy</a></li>', '<li><a href="privacy/">{{nav_privacy}}</a></li>'],
+  ['<li><a href="terms/">Terms</a></li>', '<li><a href="terms/">{{nav_terms}}</a></li>'],
   ['alt="Metronome app icon"', 'alt="{{idx_icon_alt}}"'],
   ['<h1>The metronome musicians actually trust.</h1>', '<h1>{{idx_hero_h1}}</h1>'],
   ['<p class="tagline">Sample-accurate timing, pro rhythm tools, and a finish worthy of stage and studio.</p>', '<p class="tagline">{{idx_hero_tagline}}</p>'],
-  ['aria-label="Coming soon to the App Store"', 'aria-label="{{idx_cta}}"'],
-  ["        Coming soon to the App Store\n", "        {{idx_cta}}\n"],
+  ["        Download on the App Store\n", "        {{idx_cta}}\n"],
   ['alt="Metronome app screen showing tempo controls, time signature, and beat indicators"', 'alt="{{idx_screenshot_alt}}"'],
   ['<h2 id="features-h">Built for the click</h2>', '<h2 id="features-h">{{idx_features_h2}}</h2>'],
   ['<p class="section-sub">Designed for working musicians who care about timing — at home, in the studio, and on stage.</p>', '<p class="section-sub">{{idx_features_sub}}</p>'],
@@ -78,6 +104,10 @@ INDEX_REPLS = [
   ['<p>Control playback from your wrist. Glance at tempo from the Lock Screen.</p>', '<p>{{idx_feat5_p}}</p>'],
   ['<h3>11 hand-crafted themes</h3>', '<h3>{{idx_feat6_h}}</h3>'],
   ['<p>Five dark, five light, plus System. Stage Mode for dim venues. Custom click sounds.</p>', '<p>{{idx_feat6_p}}</p>'],
+  # Footer nav — second occurrences of the nav strings; sub() consumed the header ones above.
+  ['<li><a href="support/">Support</a></li>', '<li><a href="support/">{{nav_support}}</a></li>'],
+  ['<li><a href="privacy/">Privacy</a></li>', '<li><a href="privacy/">{{nav_privacy}}</a></li>'],
+  ['<li><a href="terms/">Terms</a></li>', '<li><a href="terms/">{{nav_terms}}</a></li>'],
   ['<div>© 2026 Whitespace Studio. Made for working musicians.</div>', '<div>© 2026 Whitespace Studio. {{footer_madefor}}</div>'],
 ]
 
@@ -92,6 +122,7 @@ SUPPORT_REPLS = [
   ['<a class="skip-link" href="#main">Skip to content</a>', '<a class="skip-link" href="#main">{{skip_link}}</a>'],
   ['<li><a href="./" aria-current="page">Support</a></li>', '<li><a href="./" aria-current="page">{{nav_support}}</a></li>'],
   ['<li><a href="../privacy/">Privacy</a></li>', '<li><a href="../privacy/">{{nav_privacy}}</a></li>'],
+  ['<li><a href="../terms/">Terms</a></li>', '<li><a href="../terms/">{{nav_terms}}</a></li>'],
   ['<h1>Support</h1>', '<h1>{{sup_h1}}</h1>'],
   ['<p class="tagline">Help, contact, and answers for working musicians.</p>', '<p class="tagline">{{sup_tagline}}</p>'],
   ['<h2>Contact</h2>', '<h2>{{sup_contact_h2}}</h2>'],
@@ -119,6 +150,9 @@ SUPPORT_REPLS = [
   ['<p>Microphone access is used only by the built-in tuner to detect pitch in real time; audio is processed on-device and never recorded or transmitted.</p>', '<p>{{sup_privacy_p2}}</p>'],
   ['<a href="../privacy/">Read the full privacy policy →</a>', '<a href="../privacy/">{{sup_privacy_link}}</a>'],
   ['<li><a href="../">Home</a></li>', '<li><a href="../">{{nav_home}}</a></li>'],
+  # Footer nav — second occurrences of the nav strings; sub() consumed the header ones above.
+  ['<li><a href="../privacy/">Privacy</a></li>', '<li><a href="../privacy/">{{nav_privacy}}</a></li>'],
+  ['<li><a href="../terms/">Terms</a></li>', '<li><a href="../terms/">{{nav_terms}}</a></li>'],
   ['<div>© 2026 Whitespace Studio. Made for working musicians.</div>', '<div>© 2026 Whitespace Studio. {{footer_madefor}}</div>'],
 ]
 
@@ -133,8 +167,9 @@ PRIVACY_REPLS = [
   ['<a class="skip-link" href="#main">Skip to content</a>', '<a class="skip-link" href="#main">{{skip_link}}</a>'],
   ['<li><a href="../support/">Support</a></li>', '<li><a href="../support/">{{nav_support}}</a></li>'],
   ['<li><a href="./" aria-current="page">Privacy</a></li>', '<li><a href="./" aria-current="page">{{nav_privacy}}</a></li>'],
+  ['<li><a href="../terms/">Terms</a></li>', '<li><a href="../terms/">{{nav_terms}}</a></li>'],
   ['<h1>Privacy Policy</h1>', '<h1>{{priv_h1}}</h1>'],
-  ['<p class="last-updated">Last updated: April 27, 2026</p>', '<p class="last-updated">{{priv_last_updated}}</p>'],
+  ['<p class="last-updated">Last updated: July 2, 2026</p>', '<p class="last-updated">{{priv_last_updated}}</p>'],
   ['<h2>The short version</h2>', '<h2>{{priv_summary_h2}}</h2>'],
   ['<p>Metronome does not collect, store, or share your personal data on any server. There is no account system, no analytics, no advertising, and no third-party tracking. Everything you do in the app stays on your device.</p>', '<p>{{priv_summary_p}}</p>'],
   ["<h2>1. Information we don't collect</h2>", '<h2>{{priv_s1_h2}}</h2>'],
@@ -160,30 +195,99 @@ PRIVACY_REPLS = [
   ['<p>Used to connect to Bluetooth MIDI devices for clock output and external control. Metronome does not scan for or connect to non-MIDI Bluetooth devices.</p>', '<p>{{priv_s3_bt_p}}</p>'],
   ['<h3>Local Network</h3>', '<h3>{{priv_s3_ln_h3}}</h3>'],
   ['<p>Used by Ableton Link to discover and sync tempo with other music apps and devices on the same Wi-Fi network. Metronome does not transmit any data to the public internet via this permission.</p>', '<p>{{priv_s3_ln_p}}</p>'],
-  ['<h2>4. iCloud sync (optional)</h2>', '<h2>{{priv_s4_h2}}</h2>'],
-  ["<p>If you enable iCloud sync, your setlists, practice log, and settings are synchronized across your own Apple devices using Apple's iCloud infrastructure. The data is end-to-end encrypted by Apple and is associated with your private Apple ID. The developer of Metronome cannot access this data, and no third party is involved. If you disable iCloud sync, the data remains on the device where you created it.</p>", '<p>{{priv_s4_p}}</p>'],
+  ['<h2>4. Optional cloud sync</h2>', '<h2>{{priv_s4_h2}}</h2>'],
+  ["<p>If you enable iCloud sync, your setlists, practice log, and settings are synchronized across your own Apple devices using Apple's iCloud infrastructure. The data is stored in your private Apple ID container, encrypted in transit and at rest by Apple. The developer of Metronome cannot access this data, and no third party is involved. If you disable iCloud sync, the data remains on the device where you created it.</p>", '<p>{{priv_s4_p}}</p>'],
   ['<h2>5. In-app purchases</h2>', '<h2>{{priv_s5_h2}}</h2>'],
   ["<p>Pro features and tip-jar purchases are handled by Apple's StoreKit. Apple processes the transaction; the developer receives only the standard receipt (anonymous purchase confirmation). Metronome does not see your payment details, name, or Apple ID.</p>", '<p>{{priv_s5_p}}</p>'],
-  ["<h2>6. Children's privacy</h2>", '<h2>{{priv_s6_h2}}</h2>'],
-  ['<p>Metronome is suitable for users of all ages and does not knowingly collect any data from children under 13. Because the app does not collect any personal data from any user, no special children\'s data flow exists.</p>', '<p>{{priv_s6_p}}</p>'],
-  ['<h2>7. Changes to this policy</h2>', '<h2>{{priv_s7_h2}}</h2>'],
+  ["<h2>6. Children's privacy (COPPA)</h2>", '<h2>{{priv_s6_h2}}</h2>'],
+  ['<p>Metronome is suitable for users of all ages and does not knowingly collect any personal data from children under 13. Because the app does not collect personal data from any user, no special children\'s data flow exists. If you believe a child has somehow provided personal data to us, please contact us and we will confirm there is nothing to delete on our side.</p>', '<p>{{priv_s6_p}}</p>'],
+  ['<h2>7. Your rights under GDPR and CCPA</h2>', '<h2>{{priv_rights_h2}}</h2>'],
+  ['<p>If you are in the European Economic Area, the United Kingdom, Switzerland, or California, you have rights to access, correct, delete, and port your personal data, and to object to or restrict processing. Because Metronome does not collect or process personal data on any server, the practical answer to all of these is the same: there is no server-side record of you.</p>', '<p>{{priv_rights_intro}}</p>'],
+  ['<li><strong>Right of access and portability.</strong> All of your data is stored on your device, where you can view it in the app at any time.</li>', '<li>{{priv_rights_li1}}</li>'],
+  ['<li><strong>Right to erasure.</strong> Use <strong>All Settings → Delete All Data</strong> in the app. The deletion is immediate.</li>', '<li>{{priv_rights_li2}}</li>'],
+  ['<li><strong>Right to opt out of sale or sharing.</strong> We do not sell or share personal data, period.</li>', '<li>{{priv_rights_li3}}</li>'],
+  ['<h2>8. Third-party services</h2>', '<h2>{{priv_thirdparty_h2}}</h2>'],
+  ["<p>The only third party involved in Metronome is Apple: App Store distribution, StoreKit purchases, and optional iCloud sync are all provided by Apple and governed by Apple's privacy policy.</p>", '<p>{{priv_thirdparty_p1}}</p>'],
+  ['<p>No other third-party SDK, server, analytics provider, or advertising network is integrated into the app.</p>', '<p>{{priv_thirdparty_p2}}</p>'],
+  ['<h2>9. Changes to this policy</h2>', '<h2>{{priv_s7_h2}}</h2>'],
   ['<p>If this policy changes in a meaningful way, the "Last updated" date at the top will be revised and a summary of the change will be added to a new section here. Continued use of the app after a policy change constitutes acceptance of the updated policy.</p>', '<p>{{priv_s7_p}}</p>'],
-  ['<h2>8. Contact</h2>', '<h2>{{priv_s8_h2}}</h2>'],
+  ['<h2>10. Contact</h2>', '<h2>{{priv_s8_h2}}</h2>'],
   ['<p>Questions about privacy? Email <a href="mailto:juancajimi@icloud.com?subject=Metronome%20privacy%20question">juancajimi@icloud.com</a>. We aim to reply within 2 business days.</p>', '<p>{{priv_s8_p_before}} <a href="mailto:juancajimi@icloud.com?subject=Metronome%20privacy%20question">juancajimi@icloud.com</a>{{priv_s8_p_after}}</p>'],
   ['<li><a href="../">Home</a></li>', '<li><a href="../">{{nav_home}}</a></li>'],
+  # Footer nav — second occurrences of the nav strings; sub() consumed the header ones above.
+  ['<li><a href="../support/">Support</a></li>', '<li><a href="../support/">{{nav_support}}</a></li>'],
+  ['<li><a href="../terms/">Terms</a></li>', '<li><a href="../terms/">{{nav_terms}}</a></li>'],
+  ['<div>© 2026 Whitespace Studio. Made for working musicians.</div>', '<div>© 2026 Whitespace Studio. {{footer_madefor}}</div>'],
+]
+
+TERMS_REPLS = [
+  ['<html lang="en">', '<html lang="{{LANG}}"{{DIRATTR}}>'],
+  ['<title>Terms of Use — Metronome</title>', '<title>{{trm_title}}</title>'],
+  ['<meta name="description" content="Terms of use for the Metronome iOS app — license, the one-time Pro purchase, and acceptable use, in plain English." />', '<meta name="description" content="{{trm_meta_desc}}" />'],
+  ['<link rel="canonical" href="https://juanca-jimi.github.io/metronome/terms/" />', '<link rel="canonical" href="{{CANON}}" />'],
+  ['<meta property="og:title" content="Terms of Use — Metronome" />', '<meta property="og:title" content="{{trm_title}}" />'],
+  ['<meta property="og:description" content="Terms of use for the Metronome iOS app — license, the one-time Pro purchase, and acceptable use, in plain English." />', '<meta property="og:description" content="{{trm_meta_desc}}" />'],
+  ['<meta property="og:url" content="https://juanca-jimi.github.io/metronome/terms/" />', '<meta property="og:url" content="{{CANON}}" />'],
+  ['<a class="skip-link" href="#main">Skip to content</a>', '<a class="skip-link" href="#main">{{skip_link}}</a>'],
+  ['<li><a href="../support/">Support</a></li>', '<li><a href="../support/">{{nav_support}}</a></li>'],
+  ['<li><a href="../privacy/">Privacy</a></li>', '<li><a href="../privacy/">{{nav_privacy}}</a></li>'],
+  ['<li><a href="./" aria-current="page">Terms</a></li>', '<li><a href="./" aria-current="page">{{nav_terms}}</a></li>'],
+  ['<h1>Terms of Use</h1>', '<h1>{{trm_h1}}</h1>'],
+  ['<p class="last-updated">Last updated: July 2, 2026</p>', '<p class="last-updated">{{trm_last_updated}}</p>'],
+  ['<h2>The short version</h2>', '<h2>{{trm_summary_h2}}</h2>'],
+  ['<p>Metronome is free to download and use. One optional one-time purchase — Metronomad Pro — unlocks the advanced rhythm tools: no subscription, no account, no recurring charges. Apple handles all payments, and your data stays on your device. These terms are the plain-English rules for using the app.</p>', '<p>{{trm_summary_p}}</p>'],
+  ['<h2>1. Acceptance of these terms</h2>', '<h2>{{trm_s1_h2}}</h2>'],
+  ['<p>By downloading or using Metronome, you agree to these terms. If you do not agree with them, please do not use the app.</p>', '<p>{{trm_s1_p}}</p>'],
+  ['<h2>2. License</h2>', '<h2>{{trm_s2_h2}}</h2>'],
+  [%(<p>Metronome is licensed to you, not sold, under Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> (EULA). These terms supplement Apple's EULA; if they conflict, Apple's EULA controls. The license lets you use the app on any Apple device you own or control, as permitted by the App Store Usage Rules.</p>), '<p>{{trm_s2_p}}</p>'],
+  ['<h2>3. Purchases, restores, and refunds</h2>', '<h2>{{trm_s3_h2}}</h2>'],
+  ['<p>The app is free, with a single optional in-app purchase: <strong>Metronomad Pro</strong> ($3.99, or the equivalent in your local currency) — a one-time, non-recurring unlock. There are no subscriptions, no recurring charges, and no ads.</p>', '<p>{{trm_s3_p1}}</p>'],
+  ['<p>Payment is billed by Apple to your Apple ID. If you reinstall the app or move to a new device, tap <code>Restore Purchases</code> in the app to unlock Pro again at no extra cost. Refunds are handled by Apple, not the developer — you can request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>', '<p>{{trm_s3_p2}}</p>'],
+  ['<h2>4. Your content stays on your device</h2>', '<h2>{{trm_s4_h2}}</h2>'],
+  ['<p>Custom click sounds you import and the practice data the app records (practice log, streaks, goals, setlists) stay on your device and remain yours. The developer never receives a copy. Please make sure you have the rights to any audio you import. See the <a href="../privacy/">Privacy Policy</a> for exactly what is stored and how to delete it.</p>', '<p>{{trm_s4_p}}</p>'],
+  ['<h2>5. Acceptable use</h2>', '<h2>{{trm_s5_h2}}</h2>'],
+  [%(<p>Use Metronome as it is intended: as a metronome and practice tool. Don't copy, resell, or redistribute the app or its bundled sounds outside what Apple's EULA allows, don't attempt to bypass the Pro unlock, and don't use the app in any way that breaks the law.</p>), '<p>{{trm_s5_p}}</p>'],
+  ['<h2>6. No warranty</h2>', '<h2>{{trm_s6_h2}}</h2>'],
+  ['<p>Metronome is provided "as is". We work hard on timing accuracy and stability, but we cannot promise the app will always be error-free, and we make no warranties beyond those required by law.</p>', '<p>{{trm_s6_p}}</p>'],
+  ['<h2>7. Limitation of liability</h2>', '<h2>{{trm_s7_h2}}</h2>'],
+  ['<p>To the maximum extent permitted by law, the developer is not liable for indirect, incidental, or consequential damages arising from your use of the app, and total liability for any claim is limited to the amount you paid for the app. Some jurisdictions do not allow these limitations, so they may not fully apply to you.</p>', '<p>{{trm_s7_p}}</p>'],
+  ['<h2>8. Changes to these terms</h2>', '<h2>{{trm_s8_h2}}</h2>'],
+  ['<p>If these terms change in a meaningful way, the "Last updated" date at the top will be revised. Continued use of the app after a change constitutes acceptance of the updated terms.</p>', '<p>{{trm_s8_p}}</p>'],
+  ['<h2>9. Contact</h2>', '<h2>{{trm_s9_h2}}</h2>'],
+  ['<p>Questions about these terms? Email <a href="mailto:juancajimi@icloud.com?subject=Metronome%20terms%20question">juancajimi@icloud.com</a>. We aim to reply within 2 business days.</p>', '<p>{{trm_s9_p_before}} <a href="mailto:juancajimi@icloud.com?subject=Metronome%20terms%20question">juancajimi@icloud.com</a>{{trm_s9_p_after}}</p>'],
+  ['<li><a href="../">Home</a></li>', '<li><a href="../">{{nav_home}}</a></li>'],
+  # Footer nav — second occurrences of the nav strings; sub() consumed the header ones above.
+  ['<li><a href="../support/">Support</a></li>', '<li><a href="../support/">{{nav_support}}</a></li>'],
+  ['<li><a href="../privacy/">Privacy</a></li>', '<li><a href="../privacy/">{{nav_privacy}}</a></li>'],
   ['<div>© 2026 Whitespace Studio. Made for working musicians.</div>', '<div>© 2026 Whitespace Studio. {{footer_madefor}}</div>'],
 ]
 
 # Read the real pages (must exist at repo root).
-idx_tmpl  = templatize(File.read("#{ROOT}/index.html"),         INDEX_REPLS,   "index")
-sup_tmpl  = templatize(File.read("#{ROOT}/support/index.html"), SUPPORT_REPLS, "support")
-priv_tmpl = templatize(File.read("#{ROOT}/privacy/index.html"), PRIVACY_REPLS, "privacy")
+idx_src  = File.read("#{ROOT}/index.html")
+sup_src  = File.read("#{ROOT}/support/index.html")
+priv_src = File.read("#{ROOT}/privacy/index.html")
+trm_src  = File.read("#{ROOT}/terms/index.html")
+
+# Every root page must carry the current per-page hreflang block (it flows verbatim
+# into every locale render). Fails loudly if a locale was added without refreshing them.
+{ "" => ["index", idx_src], "support/" => ["support", sup_src],
+  "privacy/" => ["privacy", priv_src], "terms/" => ["terms", trm_src] }.each do |page, (name, html)|
+  unless html.include?(hreflang_block(page))
+    raise "[#{name}] hreflang block missing/stale — run `ruby render.rb --hreflang` and update the page <head>"
+  end
+end
+
+idx_tmpl  = templatize(idx_src,  INDEX_REPLS,   "index")
+sup_tmpl  = templatize(sup_src,  SUPPORT_REPLS, "support")
+priv_tmpl = templatize(priv_src, PRIVACY_REPLS, "privacy")
+trm_tmpl  = templatize(trm_src,  TERMS_REPLS,   "terms")
 
 # Fix asset-path depth: root page uses "assets/…" -> "../assets/…";
-# support/privacy already use "../assets/…" -> need "../../assets/…".
+# support/privacy/terms already use "../assets/…" -> need "../../assets/…".
 idx_tmpl  = idx_tmpl.gsub('"assets/', '"../assets/')
 sup_tmpl  = sup_tmpl.gsub('"../assets/', '"../../assets/')
 priv_tmpl = priv_tmpl.gsub('"../assets/', '"../../assets/')
+trm_tmpl  = trm_tmpl.gsub('"../assets/', '"../../assets/')
 
 def render(tmpl, tr, lang, dir_rtl, canon)
   out = tmpl.dup
@@ -214,24 +318,21 @@ slugs.each do |slug|
   Dir.mkdir(dir) unless Dir.exist?(dir)
   Dir.mkdir("#{dir}/support") unless Dir.exist?("#{dir}/support")
   Dir.mkdir("#{dir}/privacy") unless Dir.exist?("#{dir}/privacy")
+  Dir.mkdir("#{dir}/terms")   unless Dir.exist?("#{dir}/terms")
 
   File.write("#{dir}/index.html",         render(idx_tmpl,  tr, lang, rtl, "#{cbase}/"))
   File.write("#{dir}/support/index.html", render(sup_tmpl,  tr, lang, rtl, "#{cbase}/support/"))
   File.write("#{dir}/privacy/index.html", render(priv_tmpl, tr, lang, rtl, "#{cbase}/privacy/"))
+  File.write("#{dir}/terms/index.html",   render(trm_tmpl,  tr, lang, rtl, "#{cbase}/terms/"))
   count += 1
   puts "✓ #{slug} (#{lang})#{rtl ? ' [rtl]' : ''}#{translated ? '' : ' [en-fallback]'}"
 end
-puts "\nRendered #{count} slug dirs × 3 pages = #{count * 3} files."
+puts "\nRendered #{count} slug dirs × 4 pages = #{count * 4} files."
 
-# --- Regenerate sitemap.xml with hreflang alternates for the real language versions.
-# Only canonical URLs are listed (English root + the 7 translated languages); the
-# English-fallback slugs canonical to the root and are intentionally omitted.
+# --- Regenerate sitemap.xml: every page × every language variant (4 × 45 = 180 URLs),
+# each with the full hreflang alternate set (mirrors the per-page <head> blocks).
 require "date"
 today = Time.now.strftime("%Y-%m-%d")
-PAGES = [["", "1.0", "monthly"], ["support/", "0.7", "monthly"], ["privacy/", "0.5", "yearly"]]
-# [hreflang, url-prefix]; "" prefix = English root.
-VARIANTS = [["en", ""]] + TRANSLATED.map { |slug, tag| [tag, slug] }
-def url_for(pfx, page); pfx.empty? ? "#{BASE}/#{page}" : "#{BASE}/#{pfx}/#{page}"; end
 
 sm = +%(<?xml version="1.0" encoding="UTF-8"?>\n)
 sm << %(<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n)
