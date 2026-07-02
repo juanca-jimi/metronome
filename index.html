@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Metronome — A premium metronome for working musicians</title>
-  <meta name="description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link — wrapped in 11 hand-crafted themes. Coming to iOS." />
+  <meta name="description" content="Sample-accurate timing, polyrhythms, mixed meter, MIDI clock, and Ableton Link — wrapped in 11 hand-crafted themes. Now on the App Store." />
 
   <link rel="canonical" href="https://juanca-jimi.github.io/metronome/" />
 
@@ -71,6 +71,13 @@
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: border-color 0.15s ease;
+    }
+    a.cta-pill:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+      color: var(--text);
     }
 
     /* Phone mockup — minimal modern frame, no faux-notch */
@@ -189,15 +196,15 @@
       <img class="app-icon" src="assets/icon-192.png" alt="Metronome app icon" width="96" height="96" />
       <h1>The metronome musicians actually trust.</h1>
       <p class="tagline">Sample-accurate timing, pro rhythm tools, and a finish worthy of stage and studio.</p>
-      <span class="cta-pill" role="status" aria-label="Coming soon to the App Store">
+      <a class="cta-pill" href="https://apps.apple.com/app/id6762501243" rel="noopener">
         <span class="beat-dots" aria-hidden="true">
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
         </span>
-        Coming soon to the App Store
-      </span>
+        Download on the App Store
+      </a>
     </section>
 
     <section class="phone-section" aria-label="App preview">
