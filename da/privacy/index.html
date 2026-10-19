@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Privatlivspolitik</h1>
-      <p class="last-updated">Sidst opdateret: 2. juli 2026</p>
+      <p class="last-updated">Sidst opdateret: 18. oktober 2026</p>
     </div>
 
     <div class="summary">
       <h2>Den korte version</h2>
-      <p>Metronome indsamler, gemmer eller deler ikke dine personlige data på nogen server. Der er intet kontosystem, ingen analyse, ingen reklamer og ingen sporing fra tredjepart. Alt, hvad du foretager dig i appen, bliver på din enhed.</p>
+      <p>Ingen konti, reklamer eller sporing fra tredjeparter. Appen sender ikke data direkte til vores telemetriservere. Apples nedbrudsdiagnostik er beskrevet nedenfor.</p>
     </div>
 
     <h2>1. Oplysninger, vi ikke indsamler</h2>
@@ -151,9 +151,11 @@
       <li>Enhedsidentifikatorer, der bruges til sporing (IDFA, IDFV)</li>
       <li>Placeringsdata</li>
       <li>Brugsanalyse eller sessionsdata</li>
-      <li>Nedbrudsrapporter ud over de anonyme rapporter, som Apple leverer via TestFlight eller App Analytics, som du kan fravælge i iOS-indstillingerne</li>
       <li>Lydoptagelser, MIDI-data eller andet medieindhold</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Apples nedbrudsdiagnostik</h2>
+    <p>For iOS, iPadOS, macOS og watchOS kan vi hente nedbrudsrapporter fra Apple for at finde og rette fejl. De kan indeholde app- og OS-versioner, enhedsmodel og kaldstakke. Der er intet SDK fra tredjeparter til nedbrudsrapportering og ingen direkte overførsel til vores telemetriservere. For App Store-apps afhænger delingen af enhedens indstillinger for Analyse og forbedringer / Del med appudviklere. TestFlight deler automatisk nedbrudsrapporter.</p>
 
     <h2>2. Oplysninger, der gemmes på din enhed</h2>
     <p>Appen gemmer følgende lokalt på din iPhone, iPad eller Apple Watch. Intet af dette forlader enheden, medmindre du udtrykkeligt aktiverer iCloud-synkronisering (se afsnit 4):</p>

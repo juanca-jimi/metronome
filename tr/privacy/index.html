@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Gizlilik Politikası</h1>
-      <p class="last-updated">Son güncelleme: 2 Temmuz 2026</p>
+      <p class="last-updated">Son güncelleme: 18 Ekim 2026</p>
     </div>
 
     <div class="summary">
       <h2>Kısaca</h2>
-      <p>Metronome, kişisel verilerinizi hiçbir sunucuda toplamaz, saklamaz veya paylaşmaz. Hesap sistemi, analiz, reklam ve üçüncü taraf takibi yoktur. Uygulamada yaptığınız her şey cihazınızda kalır.</p>
+      <p>Hesap, reklam veya üçüncü taraf takibi yoktur. Uygulama, telemetri sunucularımıza doğrudan veri göndermez. Apple’ın çökme tanılaması aşağıda açıklanmıştır.</p>
     </div>
 
     <h2>1. Toplamadığımız bilgiler</h2>
@@ -151,9 +151,11 @@
       <li>Takip için kullanılan cihaz tanımlayıcıları (IDFA, IDFV)</li>
       <li>Konum verileri</li>
       <li>Kullanım analizleri veya oturum verileri</li>
-      <li>Apple'ın TestFlight veya App Analytics aracılığıyla sağladığı ve iOS Ayarları'ndan devre dışı bırakabileceğiniz anonim raporların ötesindeki çökme raporları</li>
       <li>Ses kayıtları, MIDI verileri veya herhangi bir medya içeriği</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Apple çökme tanılaması</h2>
+    <p>iOS, iPadOS, macOS ve watchOS için hataları bulup düzeltmek amacıyla Apple’dan çökme raporları indirebiliriz. Bunlar uygulama ve işletim sistemi sürümlerini, aygıt modelini ve çağrı yığınlarını içerebilir. Üçüncü taraf çökme raporlama SDK’sı veya telemetri sunucularımıza doğrudan veri aktarımı yoktur. App Store uygulamalarında rapor paylaşımı, aygıtınızın Analizler ve İyileştirmeler / Uygulama Geliştiricilerle Paylaş ayarlarına bağlıdır. TestFlight çökme raporlarını otomatik olarak paylaşır.</p>
 
     <h2>2. Cihazınızda saklanan bilgiler</h2>
     <p>Uygulama, aşağıdakileri iPhone, iPad veya Apple Watch cihazınızda yerel olarak saklar. iCloud senkronizasyonunu açıkça etkinleştirmediğiniz sürece bunların hiçbiri cihazdan çıkmaz (bkz. Bölüm 4):</p>

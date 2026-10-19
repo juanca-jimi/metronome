@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Adatvédelmi szabályzat</h1>
-      <p class="last-updated">Utolsó frissítés: 2026. július 2.</p>
+      <p class="last-updated">Utolsó frissítés: 2026. október 18.</p>
     </div>
 
     <div class="summary">
       <h2>Röviden</h2>
-      <p>A Metronome semmilyen szerveren nem gyűjti, nem tárolja és nem osztja meg a személyes adataidat. Nincs fiókrendszer, nincs analitika, nincs reklám és nincs harmadik féltől származó nyomkövetés. Minden, amit az appban csinálsz, az eszközödön marad.</p>
+      <p>Nincsenek fiókok, hirdetések vagy külső felek általi követés. Az app nem küld adatokat közvetlenül a telemetriai szervereinkre. Az Apple összeomlási diagnosztikájáról alább olvashat.</p>
     </div>
 
     <h2>1. Adatok, amelyeket nem gyűjtünk</h2>
@@ -151,9 +151,11 @@
       <li>Nyomkövetésre használt eszközazonosítók (IDFA, IDFV)</li>
       <li>Helyadatok</li>
       <li>Használati analitika vagy munkamenetadatok</li>
-      <li>Összeomlási jelentések azon anonim jelentéseken túl, amelyeket az Apple a TestFlighten vagy az App Analyticsen keresztül biztosít, és amelyekről az iOS beállításokban leiratkozhatsz</li>
       <li>Hangfelvételek, MIDI-adatok vagy bármilyen médiatartalom</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Az Apple összeomlási diagnosztikája</h2>
+    <p>Az iOS, iPadOS, macOS és watchOS rendszereken összeomlási jelentéseket tölthetünk le az Apple-től a hibák felderítéséhez és javításához. Ezek tartalmazhatják az app és a rendszer verzióját, az eszköz modelljét és a hívási vermeket. Nincs külső összeomlás-jelentési SDK, és nem történik közvetlen adatküldés a telemetriai szervereinkre. Az App Store-appok jelentésmegosztását az eszköz Elemzések és fejlesztések / Megosztás az appfejlesztőkkel beállításai szabályozzák. A TestFlight automatikusan megosztja az összeomlási jelentéseket.</p>
 
     <h2>2. Az eszközödön tárolt adatok</h2>
     <p>Az app az alábbiakat helyben tárolja az iPhone-odon, iPad-eden vagy Apple Watch-odon. Ezek egyike sem hagyja el az eszközt, hacsak kifejezetten be nem kapcsolod az iCloud-szinkronizálást (lásd a 4. szakaszt):</p>

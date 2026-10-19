@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Zásady ochrany súkromia</h1>
-      <p class="last-updated">Posledná aktualizácia: 2. júla 2026</p>
+      <p class="last-updated">Posledná aktualizácia: 18. októbra 2026</p>
     </div>
 
     <div class="summary">
       <h2>Stručne</h2>
-      <p>Metronome nezbiera, neukladá ani nezdieľa vaše osobné údaje na žiadnom serveri. Neexistuje žiadny systém účtov, žiadna analytika, žiadna reklama ani žiadne sledovanie tretími stranami. Všetko, čo v aplikácii robíte, zostáva vo vašom zariadení.</p>
+      <p>Žiadne účty, reklamy ani sledovanie tretími stranami. Aplikácia neposiela dáta priamo na naše telemetrické servery. Diagnostika pádov od Apple je opísaná nižšie.</p>
     </div>
 
     <h2>1. Informácie, ktoré nezbierame</h2>
@@ -151,9 +151,11 @@
       <li>Identifikátory zariadenia používané na sledovanie (IDFA, IDFV)</li>
       <li>Údaje o polohe</li>
       <li>Analytiku používania ani údaje o reláciách</li>
-      <li>Hlásenia o páde nad rámec anonymných hlásení, ktoré Apple poskytuje cez TestFlight alebo App Analytics a ktoré môžete vypnúť v nastaveniach iOS</li>
       <li>Zvukové nahrávky, MIDI dáta ani akýkoľvek mediálny obsah</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Diagnostika pádov od Apple</h2>
+    <p>Pre iOS, iPadOS, macOS a watchOS môžeme od Apple sťahovať hlásenia o pádoch, aby sme našli a opravili chyby. Môžu obsahovať verzie aplikácie a systému, model zariadenia a zásobníky volaní. Aplikácia neobsahuje SDK tretej strany na hlásenie pádov ani neposiela dáta priamo na naše telemetrické servery. Pri aplikáciách z App Storu závisí zdieľanie od nastavení zariadenia „Analytika a vylepšenia“ / „Zdieľať s vývojármi aplikácií“. TestFlight zdieľa hlásenia o pádoch automaticky.</p>
 
     <h2>2. Informácie uložené vo vašom zariadení</h2>
     <p>Aplikácia ukladá nasledujúce údaje lokálne vo vašom iPhone, iPade alebo Apple Watch. Nič z toho neopustí zariadenie, pokiaľ výslovne nezapnete synchronizáciu cez iCloud (pozri časť 4):</p>

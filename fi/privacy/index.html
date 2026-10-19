@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Tietosuojaseloste</h1>
-      <p class="last-updated">Päivitetty viimeksi: 2.7.2026</p>
+      <p class="last-updated">Päivitetty viimeksi: 18.10.2026</p>
     </div>
 
     <div class="summary">
       <h2>Lyhyesti</h2>
-      <p>Metronome ei kerää, tallenna tai jaa henkilötietojasi millekään palvelimelle. Sovelluksessa ei ole tilijärjestelmää, analytiikkaa, mainoksia eikä kolmansien osapuolten seurantaa. Kaikki, mitä teet sovelluksessa, pysyy laitteellasi.</p>
+      <p>Ei tilejä, mainoksia tai kolmansien osapuolten seurantaa. Sovellus ei lähetä tietoja suoraan telemetriapalvelimillemme. Applen kaatumisdiagnostiikka kuvataan alla.</p>
     </div>
 
     <h2>1. Tiedot, joita emme kerää</h2>
@@ -151,9 +151,11 @@
       <li>Seurantaan käytettävät laitetunnisteet (IDFA, IDFV)</li>
       <li>Sijaintitiedot</li>
       <li>Käyttöanalytiikka tai istuntotiedot</li>
-      <li>Kaatumisraportit lukuun ottamatta anonyymejä raportteja, jotka Apple tarjoaa TestFlightin tai App Analyticsin kautta ja joista voit kieltäytyä iOS-asetuksissa</li>
       <li>Äänitallenteet, MIDI-data tai mikä tahansa mediasisältö</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Applen kaatumisdiagnostiikka</h2>
+    <p>Voimme ladata Applelta iOS-, iPadOS-, macOS- ja watchOS-kaatumisraportteja virheiden etsimistä ja korjaamista varten. Ne voivat sisältää sovelluksen ja käyttöjärjestelmän versiot, laitemallin ja kutsupinot. Sovelluksessa ei ole kolmannen osapuolen kaatumisraportoinnin SDK:ta, eikä tietoja lähetetä suoraan telemetriapalvelimillemme. App Store -sovellusten raporttien jakaminen riippuu laitteen Analyysi ja parannukset / Jaa appikehittäjien kanssa -asetuksista. TestFlight jakaa kaatumisraportit automaattisesti.</p>
 
     <h2>2. Laitteellesi tallennettavat tiedot</h2>
     <p>Sovellus tallentaa seuraavat tiedot paikallisesti iPhoneen, iPadiin tai Apple Watchiin. Mikään näistä ei poistu laitteelta, ellet nimenomaisesti ota käyttöön iCloud-synkronointia (katso osio 4):</p>

@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Integritetspolicy</h1>
-      <p class="last-updated">Senast uppdaterad: 2 juli 2026</p>
+      <p class="last-updated">Senast uppdaterad: 18 oktober 2026</p>
     </div>
 
     <div class="summary">
       <h2>Kort sammanfattning</h2>
-      <p>Metronome samlar inte in, lagrar eller delar dina personuppgifter på någon server. Det finns inget kontosystem, ingen analys, ingen reklam och ingen spårning från tredje part. Allt du gör i appen stannar på din enhet.</p>
+      <p>Inga konton, annonser eller spårning från tredje part. Appen skickar inte data direkt till våra telemetriservrar. Apples kraschdiagnostik beskrivs nedan.</p>
     </div>
 
     <h2>1. Information vi inte samlar in</h2>
@@ -151,9 +151,11 @@
       <li>Enhetsidentifierare som används för spårning (IDFA, IDFV)</li>
       <li>Platsdata</li>
       <li>Användningsanalys eller sessionsdata</li>
-      <li>Kraschrapporter utöver de anonyma rapporter som Apple tillhandahåller via TestFlight eller App Analytics, vilka du kan välja bort i iOS-inställningarna</li>
       <li>Ljudinspelningar, MIDI-data eller något medieinnehåll</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Apples kraschdiagnostik</h2>
+    <p>För iOS, iPadOS, macOS och watchOS kan vi hämta kraschrapporter från Apple för att hitta och åtgärda fel. De kan innehålla app- och OS-versioner, enhetsmodell och anropsstackar. Inget SDK från tredje part för kraschrapportering ingår och ingen data skickas direkt till våra telemetriservrar. För App Store-appar styrs delningen av enhetens inställningar för Analys och förbättringar / Dela med apputvecklare. TestFlight delar kraschrapporter automatiskt.</p>
 
     <h2>2. Information som lagras på din enhet</h2>
     <p>Appen lagrar följande lokalt på din iPhone, iPad eller Apple Watch. Inget av detta lämnar enheten om du inte uttryckligen aktiverar iCloud-synk (se avsnitt 4):</p>

@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: July 2, 2026</p>
+      <p class="last-updated">Last updated: October 18, 2026</p>
     </div>
 
     <div class="summary">
       <h2>The short version</h2>
-      <p>Metronome does not collect, store, or share your personal data on any server. There is no account system, no analytics, no advertising, and no third-party tracking. Everything you do in the app stays on your device.</p>
+      <p>No accounts, advertising, or third-party tracking. The app does not send data directly to our telemetry servers. Apple crash diagnostics are explained below.</p>
     </div>
 
     <h2>1. Information we don't collect</h2>
@@ -151,12 +151,14 @@
       <li>Device identifiers used for tracking (IDFA, IDFV)</li>
       <li>Location data</li>
       <li>Usage analytics or session data</li>
-      <li>Crash reports beyond the anonymous reports Apple provides via TestFlight or App Analytics, which you can opt out of in iOS Settings</li>
       <li>Audio recordings, MIDI data, or any media content</li>
     </ul>
 
+    <h2 id="crash-diagnostics">Apple crash diagnostics</h2>
+    <p>For iOS, iPadOS, macOS, and watchOS, we may download crash reports from Apple to find and fix errors. These can include app and OS versions, device model, and crash stacks. There is no third-party crash-reporting SDK or direct transmission to our telemetry servers. App Store reporting depends on your device’s Analytics &amp; Improvements / Share with App Developers settings. TestFlight shares crash reports automatically.</p>
+
     <h2>2. Information stored on your device</h2>
-    <p>The app stores the following locally on your iPhone, iPad, or Apple Watch. None of this leaves the device unless you explicitly enable iCloud sync (see Section 4):</p>
+    <p>The app stores the following locally on your iPhone, iPad, Mac, or Apple Watch. Setlists and practice history may also sync through your iCloud account (see Section 4):</p>
     <ul>
       <li>App settings (selected theme, sounds, latency calibration, BPM, time signature)</li>
       <li>Practice log entries (date, duration, tempo)</li>
@@ -178,7 +180,7 @@
     <p>Used by Ableton Link to discover and sync tempo with other music apps and devices on the same Wi-Fi network. Metronome does not transmit any data to the public internet via this permission.</p>
 
     <h2>4. Optional cloud sync</h2>
-    <p>If you enable iCloud sync, your setlists, practice log, and settings are synchronized across your own Apple devices using Apple's iCloud infrastructure. The data is stored in your private Apple ID container, encrypted in transit and at rest by Apple. The developer of Metronome cannot access this data, and no third party is involved. If you disable iCloud sync, the data remains on the device where you created it.</p>
+    <p>If iCloud is enabled, your setlists and practice history sync through your personal iCloud account using Apple's iCloud key-value storage. Settings and custom sounds remain on your device. We do not receive a copy of your iCloud data.</p>
 
     <h2>5. In-app purchases</h2>
     <p>Pro features and tip-jar purchases are handled by Apple's StoreKit. Apple processes the transaction; the developer receives only the standard receipt (anonymous purchase confirmation). Metronome does not see your payment details, name, or Apple ID.</p>
@@ -195,7 +197,7 @@
     </ul>
 
     <h2>8. Third-party services</h2>
-    <p>The only third party involved in Metronome is Apple: App Store distribution, StoreKit purchases, and optional iCloud sync are all provided by Apple and governed by Apple's privacy policy.</p>
+    <p>Apple provides App Store distribution, StoreKit purchases, optional iCloud sync, and the crash diagnostics described above. These services are governed by Apple's privacy policy. We use Apple-provided crash reports only to investigate errors and improve app reliability.</p>
     <p>No other third-party SDK, server, analytics provider, or advertising network is integrated into the app.</p>
 
     <h2>9. Changes to this policy</h2>

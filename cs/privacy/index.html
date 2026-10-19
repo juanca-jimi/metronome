@@ -136,12 +136,12 @@
   <main id="main" class="container">
     <div class="doc-header">
       <h1>Zásady ochrany soukromí</h1>
-      <p class="last-updated">Naposledy aktualizováno: 2. července 2026</p>
+      <p class="last-updated">Naposledy aktualizováno: 18. října 2026</p>
     </div>
 
     <div class="summary">
       <h2>Ve zkratce</h2>
-      <p>Metronome neshromažďuje, neukládá ani nesdílí vaše osobní údaje na žádném serveru. Neexistuje žádný systém účtů, žádná analytika, žádná reklama ani sledování třetími stranami. Vše, co v aplikaci děláte, zůstává ve vašem zařízení.</p>
+      <p>Žádné účty, reklamy ani sledování třetími stranami. Aplikace neposílá data přímo na naše telemetrické servery. Diagnostika pádů od Applu je popsána níže.</p>
     </div>
 
     <h2>1. Informace, které neshromažďujeme</h2>
@@ -151,9 +151,11 @@
       <li>Identifikátory zařízení používané ke sledování (IDFA, IDFV)</li>
       <li>Údaje o poloze</li>
       <li>Analytiku využití nebo data o relacích</li>
-      <li>Hlášení o pádech nad rámec anonymních hlášení, která Apple poskytuje prostřednictvím TestFlight nebo App Analytics a která můžete vypnout v Nastavení iOS</li>
       <li>Zvukové nahrávky, MIDI data ani jakýkoli mediální obsah</li>
     </ul>
+
+    <h2 id="crash-diagnostics">Diagnostika pádů od Applu</h2>
+    <p>Pro iOS, iPadOS, macOS a watchOS můžeme od Applu stahovat zprávy o pádech, abychom našli a opravili chyby. Mohou obsahovat verze aplikace a systému, model zařízení a zásobníky volání. Aplikace neobsahuje SDK třetí strany pro hlášení pádů a neposílá data přímo na naše telemetrické servery. U aplikací z App Storu závisí sdílení na nastavení zařízení „Analýza a vylepšování“ / „Sdílet s vývojáři aplikací“. TestFlight sdílí zprávy o pádech automaticky.</p>
 
     <h2>2. Informace uložené ve vašem zařízení</h2>
     <p>Aplikace ukládá následující údaje lokálně ve vašem iPhonu, iPadu nebo na Apple Watch. Nic z toho neopustí zařízení, pokud výslovně nepovolíte synchronizaci přes iCloud (viz oddíl 4):</p>
